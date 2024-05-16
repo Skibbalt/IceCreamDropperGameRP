@@ -21,25 +21,25 @@ public class CountDownTimer : MonoBehaviour
 
     void Awake()
     {
-
+       
     }
 
     void Update()
     {
         if(timeBeforeGameEnds >= 0)
             timeBeforeGameEnds -= Time.deltaTime; //Counting down "timeBeforeGameEnds" 
-        DisplayTIme(timeBeforeGameEnds);
+        DisplayTime(timeBeforeGameEnds);
 
-        if(timeBeforeGameEnds <= 0)
+        if (timeBeforeGameEnds < 0)
         {
             finishedGameCountdown = true;
             gameManager?.GameFinished(finishedGameCountdown);
         }
     }
 
-    private void DisplayTIme(float timeToDisplay)
+    private void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay -= 1;
+        timeToDisplay += 1; //Need to add one to "timeBeforeGameEnds" to avoid the seconds going to -1 seconds when being displayed in the game
         float seconds = Mathf.FloorToInt(timeToDisplay % 60); //Formatting "timeBeforeGameEnds" into seconds 
         timerText.text = string.Format(" Timer : {0:00}", seconds); //Text display for UI
     }
