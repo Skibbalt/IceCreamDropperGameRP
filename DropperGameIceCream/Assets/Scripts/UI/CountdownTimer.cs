@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+//Coded by Siena
+
 public class CountDownTimer : MonoBehaviour
 {
     [SerializeField]
@@ -14,7 +16,7 @@ public class CountDownTimer : MonoBehaviour
     GameManager gameManager;
 
     [SerializeField]
-    private float timeBeforeGameEnds = 10.0f; //No matter what value, the timer goes below 0. It goes to -1 seconds then -2 seconds before it actually quits the game. Idk why
+    private float timeBeforeGameEnds = 10.0f;
 
     [HideInInspector]
     public bool finishedGameCountdown = false;
@@ -26,11 +28,12 @@ public class CountDownTimer : MonoBehaviour
 
     void Update()
     {
-        if(timeBeforeGameEnds >= 0)
-            timeBeforeGameEnds -= Time.deltaTime; //Counting down "timeBeforeGameEnds" 
         DisplayTime(timeBeforeGameEnds);
 
-        if (timeBeforeGameEnds < 0)
+        if(timeBeforeGameEnds >= 0)
+            timeBeforeGameEnds -= Time.deltaTime; //Counting down "timeBeforeGameEnds" 
+    
+        if (timeBeforeGameEnds < 0) //When "timeBeforeGameEnds" reaches zero
         {
             finishedGameCountdown = true;
             gameManager?.GameFinished(finishedGameCountdown);

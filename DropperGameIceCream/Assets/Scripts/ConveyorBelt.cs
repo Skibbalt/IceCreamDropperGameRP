@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Coded by Siena
+
 public class ConveyorBelt : MonoBehaviour
 {
     [Header ("Conveyor Belt Speed Variables")]
@@ -15,7 +17,7 @@ public class ConveyorBelt : MonoBehaviour
     private SurfaceEffector2D conveyorsurfaceEffector;
 
     private float timeBeforeSpeedUp = 5.0f; //Time before the conveyor belt speeds up
-    private float finalTimeBeforeMaxSpeed = 10.0f; //Time before the conveyor belt goes to its max speed
+    private float finalTimeBeforeMaxSpeed = 8.0f; //Time before the conveyor belt goes to its max speed. Make sure this doesn't match exactly when the countdown timer ends.
 
     void Awake()
     {
