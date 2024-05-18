@@ -21,22 +21,22 @@ public class CountDownTimer : MonoBehaviour
     [HideInInspector]
     public bool finishedGameCountdown = false;
 
-    void Awake()
-    {
-       
-    }
-
     void Update()
     {
-        DisplayTime(timeBeforeGameEnds);
+        gameManager?.StartCountdown();
 
-        if(timeBeforeGameEnds >= 0)
-            timeBeforeGameEnds -= Time.deltaTime; //Counting down "timeBeforeGameEnds" 
-    
-        if (timeBeforeGameEnds < 0) //When "timeBeforeGameEnds" reaches zero
+        if(gameManager?.StartCountdown() == true)
         {
-            finishedGameCountdown = true;
-            gameManager?.GameFinished(finishedGameCountdown);
+            DisplayTime(timeBeforeGameEnds);
+
+            if(timeBeforeGameEnds >= 0)
+                timeBeforeGameEnds -= Time.deltaTime; //Counting down "timeBeforeGameEnds" 
+        
+            if (timeBeforeGameEnds < 0) //When "timeBeforeGameEnds" reaches zero
+            {
+                finishedGameCountdown = true;
+                gameManager?.GameFinished(finishedGameCountdown);
+            }
         }
     }
 

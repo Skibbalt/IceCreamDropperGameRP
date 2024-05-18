@@ -22,16 +22,12 @@ public class ConeSpawner : MonoBehaviour
     private float lastSpawnTime = Mathf.NegativeInfinity;
     private int randomConeNumber; //The use of the "randomConeNumber" is to randomly choose an index from the "iceCreamCones" array
 
-    void Awake()
-    {
-        
-    }
-
     void Update()
     {
         gameManager?.StopConeSpawning();
+        gameManager?.StartCountdown();
 
-        if(gameManager?.StopConeSpawning() == false)
+        if(gameManager?.StopConeSpawning() == false && gameManager?.StartCountdown() == true)
         {
             if(Time.time - lastSpawnTime >= spawningCooldown) //Making a cooldown system with "spawningCooldown"
             {

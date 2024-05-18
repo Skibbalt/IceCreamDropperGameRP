@@ -13,13 +13,17 @@ public class GameManager : MonoBehaviour
     GameObject mainMenuUI;
     [SerializeField]
     GameObject endGameUI;
+    [SerializeField]
+    GameObject startMenuUI;
 
     [HideInInspector]
     public bool gameOver = false;
+    private bool gameStarted = false;
 
-    void Awake() //Only have the Main Menu visible
+    void Awake() //Only have the Start Menu visible
     {
-        mainMenuUI.SetActive(true);
+        startMenuUI.SetActive(true);
+        mainMenuUI.SetActive(false);
         endGameUI.SetActive(false);
     }
 
@@ -29,7 +33,13 @@ public class GameManager : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false; 
     }
 
-    public void GameFinished(bool isGameFinished) //Only have the End Game Menu visible
+    public void GameStarted(bool hasGameStarted) //This method is called from the "StartMenu" script
+    {
+        if(hasGameStarted == true)
+            gameStarted = hasGameStarted;
+    }
+
+    public void GameFinished(bool isGameFinished) //Only have the End Game Menu visible. This method is called on by the "CountdownTimer" script
     {
         if(isGameFinished == true)
         {
@@ -39,9 +49,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool StopConeSpawning() //To stop the cones from spawning. This method will be continuously called from "ConeSpawner"
+    public bool StopConeSpawning() //To stop the cones from spawning. This method will be continuously called from "ConeSpawner" script
     {
         return gameOver;
+    }
+
+    public bool StartCountdown() //This method is used to start the countdown of the timer. This method will be continuously called from "CountdownTimer" script and the "ConeSpawner" script
+    {
+        return gameStarted;
     }
 }
 
