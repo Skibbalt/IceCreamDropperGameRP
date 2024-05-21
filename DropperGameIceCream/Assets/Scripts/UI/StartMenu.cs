@@ -12,6 +12,8 @@ public class StartMenu : MonoBehaviour
     GameObject mainMenuUI;
     [SerializeField]
     GameObject startMenuUI;
+    [SerializeField]
+    GameObject guideMenuUI;
 
     [SerializeField]
     GameManager gameManager;
@@ -25,4 +27,10 @@ public class StartMenu : MonoBehaviour
         startMenuUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }  
+
+    public void OnGuideButtonClick() //Only have the Guide Menu UI be visible
+    {
+        startMenuUI.SetActive(false);
+        guideMenuUI.SetActive(true); 
+    }
 }

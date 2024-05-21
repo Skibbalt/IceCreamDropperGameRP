@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     GameObject endGameUI;
     [SerializeField]
     GameObject startMenuUI;
+    [SerializeField]
+    GameObject guideMenuUI;
 
     [HideInInspector]
     public bool gameOver = false;
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
         startMenuUI.SetActive(true);
         mainMenuUI.SetActive(false);
         endGameUI.SetActive(false);
+        guideMenuUI.SetActive(false);
     }
 
     void Update()
