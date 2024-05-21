@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7344552587173327181}
   - component: {fileID: -2460013078150842516}
   - component: {fileID: -903971418983954324}
+  - component: {fileID: 6646940405977433761}
   m_Layer: 0
   m_Name: SoftServe 2
-  m_TagString: Untagged
+  m_TagString: IceScoop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6646940405977433761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3072887583074766516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd06efbbb03c03641b6694b5352fe4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points: 0

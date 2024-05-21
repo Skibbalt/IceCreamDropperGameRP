@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1390169212119219343}
   - component: {fileID: 2233052211915928418}
   - component: {fileID: 7445126257962564538}
+  - component: {fileID: 4210388831789818666}
   m_Layer: 0
   m_Name: ScoopIceCream 1
-  m_TagString: Untagged
+  m_TagString: IceScoop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +159,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.325666, y: 21.047695}
   m_EdgeRadius: 0
+--- !u!114 &4210388831789818666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426334497495602936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd06efbbb03c03641b6694b5352fe4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points: 0
