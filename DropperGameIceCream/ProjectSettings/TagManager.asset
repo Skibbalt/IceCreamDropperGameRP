@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IceScoop
   - Cones
+  - Belt
   layers:
   - Default
   - TransparentFX

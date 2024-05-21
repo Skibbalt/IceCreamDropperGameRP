@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10690064}
   m_Layer: 0
-  m_Name: Button
+  m_Name: IceCreamSpawnerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,6 @@ MonoBehaviour:
   - {fileID: 5915997671825143198, guid: 8f692c1a1a5ff9a4d8a6588b97ff7666, type: 3}
   gameManager: {fileID: 1065668619}
   spawningCooldown: 2
-  coneLife: 10
 --- !u!1 &352011578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1100,7 @@ GameObject:
   - component: {fileID: 964759493}
   - component: {fileID: 964759494}
   m_Layer: 0
-  m_Name: ButtonBase (1)
+  m_Name: IceCreamButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1215,8 +1214,7 @@ MonoBehaviour:
   - {fileID: 3072887583074766516, guid: 36272181eb5415a4982509f774c27640, type: 3}
   - {fileID: 3072887583074766516, guid: be100ef2dca9b4847ad91080c09def61, type: 3}
   - {fileID: 3072887583074766516, guid: ceb3f1b2ddff07e4ca158bd50dbf9255, type: 3}
-  requiredHoldTime: 1
-  iceCreamLife: 10
+  requiredHoldTime: 0.5
   click: {fileID: 964759492}
 --- !u!58 &964759494
 CircleCollider2D:
@@ -2850,7 +2848,7 @@ GameObject:
   - component: {fileID: 1963635373}
   m_Layer: 0
   m_Name: ConveyorBelt
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3228,7 +3226,7 @@ SceneRoots:
   - {fileID: 1507196926}
   - {fileID: 1963635372}
   - {fileID: 307901986}
-  - {fileID: 1065668620}
-  - {fileID: 2063267368}
   - {fileID: 10690064}
   - {fileID: 445696632}
+  - {fileID: 1065668620}
+  - {fileID: 2063267368}

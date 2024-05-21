@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
             UnityEditor.EditorApplication.isPlaying = false; 
-
     }
 
     public void GameStarted(bool hasGameStarted) //This method is called from the "StartMenu" script
