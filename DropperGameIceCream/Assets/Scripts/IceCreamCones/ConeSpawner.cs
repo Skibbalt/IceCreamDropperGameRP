@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 //Coded by Siena
@@ -19,6 +21,9 @@ public class ConeSpawner : MonoBehaviour
     [SerializeField]
     private float spawningCooldown = 2.0f;
 
+    [SerializeField]
+    private float coneLife = 15.0f;
+
     private float lastSpawnTime = Mathf.NegativeInfinity;
     private int randomConeNumber; //The use of the "randomConeNumber" is to randomly choose an index from the "iceCreamCones" array
 
@@ -29,27 +34,19 @@ public class ConeSpawner : MonoBehaviour
 
         if(gameManager?.StopConeSpawning() == false && gameManager?.StartCountdown() == true)
         {
-            if(Time.time - lastSpawnTime >= spawningCooldown) //Making a cooldown system with "spawningCooldown"
+            if (Time.time - lastSpawnTime >= spawningCooldown)// Making a cooldown system with "spawningCooldown"
             {
-                randomConeNumber = Random.Range(0, iceCreamCones.Length);
+                randomConeNumber = UnityEngine.Random.Range(0, iceCreamCones.Length);
 
-                if(randomConeNumber == 0)
-                {
-                    Instantiate(iceCreamCones[randomConeNumber], transform.position, Quaternion.Euler(-180, 180, 0)); 
-                    //Making the "iceCreamCones [randomConeNumber]" appear in the game at the position the game object this script is attached to
-                    //iceCreamCones[randomConeNumber].SetActive(true);
-                    lastSpawnTime = Time.time;
-                }
-                    
-                if(randomConeNumber == 1)
-                {
-                    Instantiate(iceCreamCones[randomConeNumber], transform.position, Quaternion.Euler(-180, 180, 0));
-                    //Making the "iceCreamCones [randomConeNumber]" appear in the game at the position the game object this script is attached to 
-                    //iceCreamCones[randomConeNumber].SetActive(true);
-                    lastSpawnTime = Time.time;
-                }               
+                GameObject cone = Instantiate(iceCreamCones[randomConeNumber], transform.position, Quaternion.Euler(-180, 180, 0)); // instantiate the cone at the spawner
+                cone.SetActive(true); //instantiated cone is active
+                Destroy(cone, coneLife); // Destroy the cone after coneLife seconds
+                lastSpawnTime = Time.time;
+
+              
             }
         }
+        
     }
 }
 

@@ -16,8 +16,8 @@ public class ConveyorBelt : MonoBehaviour
 
     private SurfaceEffector2D conveyorsurfaceEffector;
 
-    private float timeBeforeSpeedUp = 5.0f; //Time before the conveyor belt speeds up
-    private float finalTimeBeforeMaxSpeed = 8.0f; //Time before the conveyor belt goes to its max speed. Make sure this doesn't match exactly when the countdown timer ends.
+    private float timeBeforeSpeedUp = 10.0f; //Time before the conveyor belt speeds up
+    private float finalTimeBeforeMaxSpeed = 50.0f; //Time before the conveyor belt goes to its max speed. Make sure this doesn't match exactly when the countdown timer ends.
 
     void Awake()
     {
