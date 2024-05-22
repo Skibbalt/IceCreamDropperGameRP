@@ -4,10 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This is Coded by Sidd
 public class ScoreManager : MonoBehaviour
 {
     public int pointsGathered = 0;
-    public TMP_Text scoreText; // Change from Text to TMP_Text
+    public TMP_Text scoreText;
     private int score = 0;
 
     void Start()
@@ -17,15 +18,17 @@ public class ScoreManager : MonoBehaviour
 
     public void IncreaseScore()
     {
-        score += 10 ;
+        score += 10 ; // This is for the Score to go straight to 10 rather than 1 points.
         pointsGathered ++;
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
-        scoreText.text = score.ToString();
-    }
+        scoreText.text = score.ToString(); // This is for the Score to Show to points UI
+        Debug.Log(score);
 
+    }
+    
     
 }
