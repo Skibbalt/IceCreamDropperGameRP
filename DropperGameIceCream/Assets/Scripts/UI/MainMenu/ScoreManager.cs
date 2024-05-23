@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text scoreText;
+   
+    public TMP_Text scoreText;
 
     public int score = 0;
 
-    void Awake()
+    void Start()
     {
         UpdateScoreText();
     }

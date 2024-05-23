@@ -9,13 +9,11 @@ using Unity.VisualScripting;
 
 public class EndGame : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text scoreText;
-
-    [SerializeField]
+  
+    public TMP_Text scoreText;
     public ScoreManager scoreManager;
 
-    void Awake()
+    void Start()
     {
         scoreText.text = scoreManager.score.ToString();
     }
