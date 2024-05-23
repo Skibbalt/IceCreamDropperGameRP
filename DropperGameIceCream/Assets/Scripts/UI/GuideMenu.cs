@@ -12,7 +12,7 @@ public class GuideMenu : MonoBehaviour
     [SerializeField]
     GameObject startMenuUI;
 
-    public void OnExitClick()
+    public void OnExitClick() //Only display the Start Menu screen
     {
         startMenuUI.SetActive(true);
         guideMenuUI.SetActive(false);

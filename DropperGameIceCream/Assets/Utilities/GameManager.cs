@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,20 +19,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject guideMenuUI;
   
-
-
     [HideInInspector]
     public bool gameOver = false;
     private bool gameStarted = false;
     
-
     void Awake() //Only have the Start Menu visible
     {
         startMenuUI.SetActive(true);
         mainMenuUI.SetActive(false);
         endGameUI.SetActive(false);
         guideMenuUI.SetActive(false);
-       
     }
 
     void Update()
@@ -55,7 +50,6 @@ public class GameManager : MonoBehaviour
             gameOver = true;
             mainMenuUI.SetActive(false);
             endGameUI.SetActive(true);
-           
         }
     }
 

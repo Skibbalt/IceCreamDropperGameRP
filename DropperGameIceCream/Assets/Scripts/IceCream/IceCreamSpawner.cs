@@ -14,10 +14,12 @@ public class IcecreamSpawner : MonoBehaviour
     private GameObject[] softServe; //This is an array of random softServe scoops that will be chosen
 
     [SerializeField]
-    private float requiredHoldTime = 0.5f; //This is for holding the button to spawn "softServe"
+    private float requiredHoldTime = 0.35f; //This is for holding the button to spawn "softServe"
+
+    [SerializeField]
+    public Animator click;
 
     private float iceCreamLife = 8.0f;
-    public Animator click;
     private bool isHoldingButton = false;
 
     void Update()

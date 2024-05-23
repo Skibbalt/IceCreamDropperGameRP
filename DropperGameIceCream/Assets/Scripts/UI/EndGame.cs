@@ -5,15 +5,18 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
-//This is Done By Siddharth
+//Coded by Siddharth
+
 public class EndGame : MonoBehaviour
 {
-    public TMP_Text scoreText;
+    [SerializeField]
+    private TMP_Text scoreText;
+
+    [SerializeField]
     public ScoreManager scoreManager;
 
-    void Start()
+    void Awake()
     {
-        //scoreManager = GetComponent<ScoreManager>();
         scoreText.text = scoreManager.score.ToString();
     }
 }

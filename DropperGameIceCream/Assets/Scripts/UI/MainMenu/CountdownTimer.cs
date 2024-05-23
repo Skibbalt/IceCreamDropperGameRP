@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 //Coded by Siena
 
@@ -16,7 +15,7 @@ public class CountDownTimer : MonoBehaviour
     GameManager gameManager;
 
     [SerializeField]
-    private float timeBeforeGameEnds = 10.0f;
+    private float timeBeforeGameEnds = 30.0f;
 
     [HideInInspector]
     public bool finishedGameCountdown = false;

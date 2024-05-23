@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -2460013078150842516}
   - component: {fileID: -903971418983954324}
   - component: {fileID: 6646940405977433761}
-  - component: {fileID: 3219181106281554338}
   m_Layer: 0
   m_Name: SoftServe 2
   m_TagString: IceScoop
@@ -174,15 +173,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Points: 0
   tagNumber: 2
---- !u!114 &3219181106281554338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072887583074766516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ace4623df22b5145b6301b44a48809c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

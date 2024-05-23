@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6409494410387583776}
   - component: {fileID: 4850560829452912624}
   - component: {fileID: -8726361752613053267}
-  - component: {fileID: 3804072370066896340}
   m_Layer: 0
   m_Name: ScoopIceCream 2
   m_TagString: IceScoop
@@ -174,15 +173,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Points: 0
   tagNumber: 1
---- !u!114 &3804072370066896340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6426334497495602936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ace4623df22b5145b6301b44a48809c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
