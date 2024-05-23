@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7949852707125809500}
   - component: {fileID: 5750835558726000591}
   - component: {fileID: -7487933673068915050}
+  - component: {fileID: 362811022168715721}
   m_Layer: 0
   m_Name: ScoopCone
   m_TagString: Cones
@@ -204,3 +205,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.69, y: 1.8}
   m_EdgeRadius: 0
+--- !u!114 &362811022168715721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401405837012564419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475fa63ce591e2047af2f0a7a3303711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagNumber: 1

@@ -7,9 +7,9 @@ using UnityEngine.UI;
 //This is Coded by Sidd
 public class ScoreManager : MonoBehaviour
 {
-    public int pointsGathered = 0;
+    
     public TMP_Text scoreText;
-    private int score = 0;
+    public int score = 0;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     public void IncreaseScore()
     {
         score += 10 ; // This is for the Score to go straight to 10 rather than 1 points.
-        pointsGathered ++;
+
         UpdateScoreText();
     }
 
@@ -29,6 +29,7 @@ public class ScoreManager : MonoBehaviour
         Debug.Log(score);
 
     }
+  
     
     
 }

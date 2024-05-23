@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 0
+  tagNumber: 1
 --- !u!114 &2883682755517217184
 MonoBehaviour:
   m_ObjectHideFlags: 0
