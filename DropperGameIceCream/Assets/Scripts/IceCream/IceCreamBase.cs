@@ -20,7 +20,7 @@ public class IceCreamBase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();    
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Belt")) //Destroy the game object this script is attached to if it collides with the ConveyorBelt
             Destroy(this.gameObject);
