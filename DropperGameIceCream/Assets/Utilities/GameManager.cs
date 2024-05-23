@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
-            UnityEditor.EditorApplication.isPlaying = false; 
+            Application.Quit();
     }
 
     public void GameStarted(bool hasGameStarted) //This method is called from the "StartMenu" script
