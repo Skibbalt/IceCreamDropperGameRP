@@ -28,4 +28,10 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = score.ToString(); // This is for the Score to Show to points UI
     }
+
+    public void DecreaseScore() 
+    {
+        score -= 10 ;
+        UpdateScoreText();
+    }
 }

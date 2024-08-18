@@ -32,7 +32,7 @@ public class IcecreamSpawner : MonoBehaviour
     void OnMouseDown() //This method allows the ice scoops to spawn UPON pressing the button, and not at random places
     {
 
-        if (Input.GetMouseButtonDown(0))       
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.yesGameStarted== true)       
         {
             click.SetTrigger("Click");
             int randomScoopSpawn = UnityEngine.Random.Range(0, 3);  //Random range for the balls of icream prefabs

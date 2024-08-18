@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     [Header ("UI Management")]
     [SerializeField]
     GameObject mainMenuUI;
@@ -18,13 +19,22 @@ public class GameManager : MonoBehaviour
     GameObject startMenuUI;
     [SerializeField]
     GameObject guideMenuUI;
+
   
     [HideInInspector]
     public bool gameOver = false;
-    private bool gameStarted = false;
+    public bool yesGameStarted = false;
     
     void Awake() //Only have the Start Menu visible
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         startMenuUI.SetActive(true);
         mainMenuUI.SetActive(false);
         endGameUI.SetActive(false);
@@ -40,7 +50,7 @@ public class GameManager : MonoBehaviour
     public void GameStarted(bool hasGameStarted) //This method is called from the "StartMenu" script
     {
         if(hasGameStarted == true)
-            gameStarted = hasGameStarted;
+            yesGameStarted = hasGameStarted;
     }
 
     public void GameFinished(bool isGameFinished) //Only have the End Game Menu visible. This method is called on by the "CountdownTimer" script
@@ -60,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public bool StartCountdown() //This method is used to start the countdown of the timer. This method will be continuously called from "CountdownTimer" script and the "ConeSpawner" script
     {
-        return gameStarted;
+        return yesGameStarted;
     }
 }
 
