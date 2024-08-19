@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7445126257962564538}
   - component: {fileID: 1381751931189651730}
   - component: {fileID: 4210388831789818666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ScoopIceCream 1
   m_TagString: IceScoop
   m_Icon: {fileID: 0}

@@ -14,11 +14,21 @@ public class ConeSpawner : MonoBehaviour
 
     [SerializeField]
     private float spawningCooldown = 2.0f;
-
     private float coneLife = 8.0f;
     private float lastSpawnTime = Mathf.NegativeInfinity;
     private int randomConeNumber; //The use of the "randomConeNumber" is to randomly choose an index from the "iceCreamCones" array
+    private bool coneEntered;
+    private bool ScoupeEntered;
+    private int WantedCone = 6;
+    private int Scoupes = 7;
 
+
+    private ScoreManager scoreManager;
+
+    private void Start()
+    {
+        scoreManager = FindObjectOfType<ScoreManager>();
+    }
     void Update()
     {
         gameManager?.StopConeSpawning();
@@ -35,6 +45,21 @@ public class ConeSpawner : MonoBehaviour
                 Destroy(cone, coneLife); //Destroy the cone after coneLife seconds
                 lastSpawnTime = Time.time;
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer ==6) 
+        {
+          coneEntered = true;
+        }
+        if (other.gameObject.layer == 7) 
+        { 
+            ScoupeEntered = true;
+        }
+        if (coneEntered == true && ScoupeEntered == false) 
+        {
+        scoreManager.DecreaseScore();
         }
     }
 }

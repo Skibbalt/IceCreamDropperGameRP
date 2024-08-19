@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5750835558726000591}
   - component: {fileID: -7487933673068915050}
   - component: {fileID: 362811022168715721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ScoopCone
   m_TagString: Cones
   m_Icon: {fileID: 0}

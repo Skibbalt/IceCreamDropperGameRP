@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5579636116418167059}
   - component: {fileID: 3845406624573473091}
   - component: {fileID: -1229782557726703819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SoftServeCone
   m_TagString: Cones
   m_Icon: {fileID: 0}
